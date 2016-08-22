@@ -42,4 +42,4 @@ app/platforms
 app/.vscode
 
 server/node_modules
-
+server/.idea

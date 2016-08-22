@@ -4,7 +4,7 @@ var fs = require("fs");
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  console.log('Testing......')
+  console.log('Testing......');
 
   fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
     console.log( data );
@@ -13,14 +13,13 @@ router.get('/', function(req, res, next) {
 
 });
 
-router.get('/users', function(req, res, next) {
+router.post('/', function(req, res) {
 
-  console.log('Testing......')
+    console.log('Creating', req.body);
 
-  fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
-    console.log( data );
-    res.end( data );
-  });
+    fs.appendFile( __dirname + "/" + "users.json", req.body, function (err, data) {
+        res.send( 'User created!!!' );
+    });
 
 });
 
