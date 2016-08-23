@@ -32,3 +32,10 @@ Integrantes:
 * npm install -g ionic bower gulp
 * npm install
 * gulp
+
+### Comandos para rodar a api:
+* cd server/
+* npm install
+* npm start
+* URL padrão será: http://localhost:3000/api/
+* Exemplo de recurso já disponível: http://localhost:3000/api/v1/users
