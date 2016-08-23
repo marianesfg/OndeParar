@@ -1,6 +1,5 @@
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives'])
-
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope) {
   $ionicPlatform.ready(function() {
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -10,11 +9,35 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives']
       StatusBar.styleDefault();
     }
   });
+
+  //Retorna a rua mais próxima
+  $rootScope.getLocation = function(callBack){
+    navigator.geolocation.getCurrentPosition(function (pos) {
+      
+      var myLocation = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+      var directionsService = new google.maps.DirectionsService();
+
+      directionsService.route({
+        origin: myLocation, 
+        destination: myLocation, 
+        travelMode: google.maps.DirectionsTravelMode.DRIVING
+      }, function(response, status) {
+        if (status == google.maps.DirectionsStatus.OK)
+        {
+          callBack(response.routes[0].legs[0].start_location);
+        } else {
+          callBack(homeLatlng);
+        }
+      });
+    }, function (error) {
+      alert('Unable to get location: ' + error.message);
+    });
+  }
 })
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-
-    .state('app', {
+  
+  .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
@@ -48,6 +71,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives']
       }
     }
   });
+  
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/map');
 });

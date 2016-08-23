@@ -6,21 +6,31 @@ angular.module('starter.directives', [])
     scope: {
       onCreate: '&'
     },
-    link: function ($scope, $element, $attr) {
+    link: function ($scope, $element, $attr, $rootScope) {
       function initialize() {
-        var mapOptions = {
-          center: new google.maps.LatLng(43.07493, -89.381388),
-          zoom: 16,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map($element[0], mapOptions);
-  
-        $scope.onCreate({map: map});
+        navigator.geolocation.getCurrentPosition(function (pos) {
+          var myLocation = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+          
+          var mapOptions = {
+            center: myLocation,
+            zoom: 18,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            zoomControl: false,
+            mapTypeControl: false,
+            scaleControl: false,
+            streetViewControl: false,
+            rotateControl: false
+          };
 
-        // Stop the side bar from dragging when mousedown/tapdown on the map
-        google.maps.event.addDomListener($element[0], 'mousedown', function (e) {
-          e.preventDefault();
-          return false;
+          var map = new google.maps.Map($element[0], mapOptions);
+          $scope.onCreate({map: map});
+
+          google.maps.event.addDomListener($element[0], 'mousedown', function (e) {
+            e.preventDefault();
+            return false;
+          });
+        }, function (error) {
+          alert('Unable to get location: ' + error.message);
         });
       }
 

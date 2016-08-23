@@ -13,6 +13,7 @@
     "PauloPereira"
   ],
   "dependencies": {
+    "ionic": "latest",
     "bower": "latest",
     "gulp": "latest",
     "gulp-rename": "latest",
