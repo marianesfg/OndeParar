@@ -2,22 +2,22 @@
   {
     "id": 1,
     "login" : "mahesh",
-    "password" : "password1",
-    "name" : "mahesh",
+    "senha" : "*******",
+    "nome" : "mahesh",
     "email" : "mahesh@gmail.com"
   },
   {
     "id": 2,
     "login" : "suresh",
-    "password" : "password2",
-    "name" : "suresh",
+    "senha" : "*******",
+    "nome" : "suresh",
     "email" : "sresh@gmail.com"
   },
   {
     "id": 3,
     "login" : "ramesh",
-    "password" : "password3",
-    "name" : "ramesh",
+    "senha" : "*******",
+    "nome" : "ramesh",
     "email" : "ramesh@gmail.com"
   }
 ]

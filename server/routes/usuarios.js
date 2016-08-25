@@ -6,7 +6,7 @@ var fs = require("fs");
 router.get('/', function(req, res, next) {
   console.log('Testing......');
 
-  fs.readFile( __dirname + "/jsons/users/" + "users.json", 'utf8', function (err, data) {
+  fs.readFile( __dirname + "/jsons/usuarios/" + "usuarios.json", 'utf8', function (err, data) {
     res.end( data );
   });
 
@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
 router.get('/:id', function(req, res, next) {
   console.log('Testing......', req.params.id);
 
-  fs.readFile( __dirname + "/jsons/users/" + "user.json", 'utf8', function (err, data) {
+  fs.readFile( __dirname + "/jsons/usuarios/" + "usuario.json", 'utf8', function (err, data) {
     res.end( data );
   });
 
@@ -23,7 +23,7 @@ router.get('/:id', function(req, res, next) {
 
 router.post('/', function(req, res) {
 
-    fs.appendFile( __dirname + "/jsons/" + "post_success.json", req.body, function (err, data) {
+    fs.appendFile( __dirname + "/jsons/" + "post_sucesso.json", req.body, function (err, data) {
         res.send( 'User created!!!' );
     });
 
@@ -33,7 +33,7 @@ router.delete('/', function(req, res) {
 
     console.log('Creating', req.body);
 
-    fs.appendFile( __dirname + "/jsons/" + "delete_success.json", req.body, function (err, data) {
+    fs.appendFile( __dirname + "/jsons/" + "delete_sucesso.json", req.body, function (err, data) {
         res.send( 'User created!!!' );
     });
 
