@@ -8,6 +8,7 @@ var express = require('express'),
 
 var routes = require('./routes/index');
 var users = require('./routes/usuarios');
+var enderecos = require('./routes/enderecos');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', routes);
 app.use('/api/v1/usuarios', users);
+app.use('/api/v1/enderecos', enderecos);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

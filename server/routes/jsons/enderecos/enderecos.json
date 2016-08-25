@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "logradouro" : "Av Brigadeiro Luis Antonio",
+    "cep" : "01317-001",
+    "bairro" : "Bela Vista",
+    "cidade" : "Sao Paulo",
+    "estado" : "Sao Paulo",
+    "pais" : "Brasil",
+    "zonaAzul" : true,
+    "localidadePerigosa": false,
+    "incidenciaFlanelinha": "NENHUMA",
+    "riscoInundacao" : "NENHUM",
+    "latitude": -23.5695,
+    "longitude": -46.6508
+
+  },
+  {
+    "id": 1,
+    "logradouro" : "Av Aricanduva",
+    "cep" : "01317-001",
+    "bairro" : "Aricanduva",
+    "cidade" : "Sao Paulo",
+    "estado" : "Sao Paulo",
+    "pais" : "Brasil",
+    "zonaAzul" : false,
+    "localidadePerigosa": true,
+    "incidenciaFlanelinha": "MEDIA",
+    "riscoInundacao" : "ALTO",
+    "latitude": -23.5652,
+    "longitude": -46.6521
+
+  },
+  {
+    "id": 1,
+    "logradouro" : "Av Paulista",
+    "cep" : "01317-001",
+    "bairro" : "Bela Vista",
+    "cidade" : "Sao Paulo",
+    "estado" : "Sao Paulo",
+    "pais" : "Brasil",
+    "zonaAzul" : true,
+    "localidadePerigosa": false,
+    "incidenciaFlanelinha": "NENHUMA",
+    "riscoInundacao" : "NENHUM",
+    "latitude": -23.5652,
+    "longitude": -46.6521
+
+  },
+  {
+    "id": 1,
+    "logradouro" : "Rua Heliópolis",
+    "cep" : "01317-001",
+    "bairro" : "Vila Hamburguesa",
+    "cidade" : "Sao Paulo",
+    "estado" : "Sao Paulo",
+    "pais" : "Brasil",
+    "zonaAzul" : false,
+    "localidadePerigosa": true,
+    "incidenciaFlanelinha": "ALTA",
+    "riscoInundacao" : "MEDIO",
+    "latitude": -23.5352,
+    "longitude": -46.5697
+
+  },
+  {
+    "id": 1,
+    "logradouro" : "Av Celso Garcia",
+    "cep" : "01317-001",
+    "bairro" : "Tatuapé",
+    "cidade" : "Sao Paulo",
+    "estado" : "Sao Paulo",
+    "pais" : "Brasil",
+    "zonaAzul" : false,
+    "localidadePerigosa": false,
+    "incidenciaFlanelinha": "MEDIA",
+    "riscoInundacao" : "BAIXO",
+    "latitude": -23.5352,
+    "longitude": -46.5697
+
+  },
+  {
+    "id": 1,
+    "logradouro" : "Av Ibirapuera",
+    "cep" : "01317-001",
+    "bairro" : "Indianópolis",
+    "cidade" : "Sao Paulo",
+    "estado" : "Sao Paulo",
+    "pais" : "Brasil",
+    "zonaAzul" : true,
+    "localidadePerigosa": false,
+    "incidenciaFlanelinha": "BAIXA",
+    "riscoInundacao" : "BAIXO",
+    "latitude": -23.6019,
+    "longitude": -46.6607
+
+  }
+]

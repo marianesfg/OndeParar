@@ -1,0 +1,15 @@
+{
+  "id": 1,
+  "logradouro" : "Av Brigadeiro Luis Antonio",
+  "cep" : "01317-001",
+  "bairro" : "Bela Vista",
+  "cidade" : "Sao Paulo",
+  "estado" : "Sao Paulo",
+  "pais" : "Brasil",
+  "zonaAzul" : true,
+  "localidadePerigosa": false,
+  "incidenciaFlanelinha": "NENHUMA",
+  "latitude": -23.5695,
+  "longitude": -46.6508
+
+}
