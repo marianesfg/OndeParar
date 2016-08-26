@@ -53,15 +53,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives']
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
-      }
-  })
-
   .state('app.map', {
     url: '/map',
     views: {

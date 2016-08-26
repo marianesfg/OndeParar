@@ -17,12 +17,24 @@ angular.module('starter.controllers', ['ionic'])
     $scope.modal.show();
   };
 
+  $scope.logout = function(){
+    $scope.signed = false;
+    $scope.user = {};
+    $scope.loginData = {};
+  }
+
   $scope.doLogin = function() {
     console.log('Doing login', $scope.loginData);
 
-    $timeout(function() {
+    if($scope.loginData.email && $scope.loginData.password){
+      $scope.signed = true;
+      
+      $scope.user = {
+        name: "user"
+      };
+
       $scope.closeLogin();
-    }, 1000);
+    }
   };
 })
 
