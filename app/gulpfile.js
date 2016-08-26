@@ -31,7 +31,7 @@ gulp.task('minify-css', function() {
 });
 
 gulp.task('minify-js', function(){
-    gulp.src(['www/js/app.js', 'www/js/controllers.js', 'www/js/directives.js'])
+    gulp.src(['lib/app.js', 'lib/directives.js', 'lib/controllers/app.ctrl.js', 'lib/controllers/map.ctrl.js'])
         .pipe(jsMin())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('www/js'));
